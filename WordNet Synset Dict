@@ -1,6 +1,7 @@
 #import Wordnet and the Natural Language Toolkit
 from nltk.corpus import wordnet
-inp = input("What is the words you want synonyms for? ")
+print("Enter words all lowercase with a single space in between (ex: fun tool love)")
+inp = input("What are the words you want synonyms for? ")
 inps = inp.split(' ')
 #Create empty list add synonyms to
 dict = {}
