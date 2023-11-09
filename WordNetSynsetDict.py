@@ -94,8 +94,6 @@ def percent():
                 except ZeroDivisionError:
                      synList.append(0.00)
             h=h+1
-    print(synList)
-    ################
     list2 = []
     for key2 in dic2:
         list2.append(dic2[key2])
@@ -120,7 +118,6 @@ def percent():
                 except ZeroDivisionError:
                      hypList.append(0.00)
             r=r+1
-    print(hypList)
     ###############
     list3 = []
     for key3 in dic3:
@@ -146,7 +143,6 @@ def percent():
                 except ZeroDivisionError:
                      hoList.append(0.00)
             u=u+1
-    print(hoList)
 
     r = len(listS)
     u = 1
@@ -169,10 +165,22 @@ def percent():
                 except ZeroDivisionError:
                      SList.append(0.00)
             u=u+1
-    print(SList)
+    length = len(synList)
+    newlist = []
+    for i in range(0, length):
+
+        newvalue = int(float(synList[i]))+int(float(hypList[i])) +int(float(hoList[i]))+int(float(SList[i]))
+        newlist.append(newvalue)
+    o = []
+    for x in newlist:
+         value = int(x)/length
+         o.append(value)
+    print(o)
+   
 ##call percent to run
 percent()
 ##synList
 ##hypList
 ##hoList
 ##SList
+
